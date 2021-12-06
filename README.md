@@ -11,7 +11,7 @@ Our purpose was to analyze and draw conclusions about the data so we can make su
 ### Analysis of Outcomes Based on Launch Date
 I began the analysis by extracting the year from the Date Created column to a new column within the datasheet. Through the use of a pivot table, I was able to see all the necessary data to begin drawing insights regarding Louise's goals for her kickstarter campaign. Arranging this table in descending order and plotting the corresponding graph helped visualize and confirm when kickstarter campaigns for theater are the most succesful with respect to time (arranged by month). The tricky part in this step was making sure to remove what wasn't necessary after assigning the rows to Date Created and arranging the table in descending order. Using a pivot chart the data was much easier to understand once it was visualize in the following graph.
 
-![Theater_Outcomes_vs_Launch](file:///C:/Users/nodna/Desktop/Rutgers_Data_Science_Bootcamp/MODULE_1_CHALLENGE/Resources/Theater_Outcomes_vs_Launch.png)
+![Theater_Outcomes_vs_Launch](https://github.com/brand0j/Kickstarter-Analysis/blob/main/Resources/Theater_Outcomes_vs_Launch.png)
 
 ### Analysis of Outcomes Based on Goals
 The next step in my analysis was to help Louise pinpoint the ideal amount for her kickstarter goal to ensure the highest probability of it being succesful. The goal is to gain insight on the following with respect to their goal amount:
@@ -51,7 +51,7 @@ Now that we have a sum of the total number of projects given an interval (a,b] w
     
 All of the data is now sorted in a way we can begin to visualize. The final step was to graph what was discovered in the hopes we can understand it better. Setting the X-axis to our intervals and the Y-axis as the %, it becomes much more clear how the goal amount affects the amount of succesful kickstarter campaigns which was what we were interested in from the start.
 
-![Outcomes_Based_on_Goal](file:///C:/Users/nodna/Desktop/Rutgers_Data_Science_Bootcamp/MODULE_1_CHALLENGE/Resources/Outcomes_vs_Goals.png)
+![Outcomes_Based_on_Goal](https://github.com/brand0j/Kickstarter-Analysis/blob/main/Resources/Outcomes_vs_Goals.png)
 
 ### Challenges and Difficulties Encountered
 
