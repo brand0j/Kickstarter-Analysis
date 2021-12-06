@@ -9,29 +9,27 @@ Our purpose was to analyze and draw conclusions about the data so we can make su
 ## Analysis and Challenges
 
 ### Analysis of Outcomes Based on Launch Date
-I began the analysis by extracting the year from the Date Created column to a new column within the datasheet. Through the use of a pivot table, I was able to see all the necessary data to begin drawing insights regarding Louise's goals for her kickstarter campaign. Arranging this table in descending order and plotting the corresponding graph helped visualize and confirm when kickstarter campaigns for theater are the most succesful with respect to time (arranged by month). The tricky part in this step was making sure to remove what wasn't necessary after assigning the rows to Date Created and arranging the table in descending order. Using a pivot chart the data was much easier to understand once it was visualize in the following graph.
+I began the analysis by extracting the year from the Date Created column to a new column within the datasheet. Through the use of a pivot table and selecting the fields we were interested in, I was able to see all the necessary data to begin drawing insights regarding Louise's goals for her kickstarter campaign. Arranging this table in descending order and plotting the corresponding graph helped visualize and confirm when kickstarter campaigns for theater are the most succesful with respect to time (arranged by month).
 
 ![Theater_Outcomes_vs_Launch](https://github.com/brand0j/Kickstarter-Analysis/blob/main/Resources/Theater_Outcomes_vs_Launch.png)
 
 ### Analysis of Outcomes Based on Goals
 The next step in my analysis was to help Louise pinpoint the ideal amount for her kickstarter goal to ensure the highest probability of it being succesful. The goal is to gain insight on the following with respect to their goal amount:
 
-    * # Succesful
-    * # Failed
-    * # Canceled
-    * % Succesful
-    * % Failed
-    * % Canceled
+    - # Succesful
+    - # Failed
+    - # Canceled
+    - # Total Outcomes
+    - % Succesful
+    - % Failed
+    - % Canceled
 
-Splitting up the goal amount into intervals of values (a,b], where:
+Splitting up the goal amount into intervals of values *(a,b]*, where:
 
-    * a = {0,1000,5000,10000,15000,20000,25000,30000,35000,40000,45000,50000}
-    * b = {1000,5000,10000,15000,20000,25000,30000,35000,40000,45000,50000,inf}
-        - first interval: (0,1000]
-        - second interval: (1000,5000]
-        - etc.
+    - a = {0,1000,5000,10000,15000,20000,25000,30000,35000,40000,45000,50000}
+    - b = {1000,5000,10000,15000,20000,25000,30000,35000,40000,45000,50000,inf}
 
-By splitting up our goal amount into these intervals we can get a count of outcomes for that interval along with the specification that we are only interested in analyzing these counts regarding the subcategory "plays". This is implemented in the following way:
+we can get a count of outcomes for that interval along with the specification that we are only interested in the subcategory *"plays"*. This is implemented in the following way using the [COUNTIFS function](https://support.microsoft.com/en-us/office/countifs-function-dda3dc6e-f74e-4aee-88bc-aa8c2a866842?ui=en-us&rs=en-us&ad=us) :
 
 ```
 =COUNTIFS(Kickstarter!F:F,"successful",Kickstarter!D:D,">999",Kickstarter!D:D,"<5000",Kickstarter!R:R,"plays")
@@ -39,15 +37,7 @@ By splitting up our goal amount into these intervals we can get a count of outco
 =COUNTIFS(Kickstarter!F:F,"canceled",Kickstarter!D:D,">999",Kickstarter!D:D,"<5000",Kickstarter!R:R,"plays")
 ```
 
-I applied this formula going down each respective column while adjusting the interval as necessary. The result was a table with the desired count with respect to the conditions previously mentioned. Now that we have this information it's time to analyze these outcomes as a percentage against the total number of kickstarters. Take the sum of each row to get the amount of total projects within that range. For an interval (a,b]: #_Total_Projects = (#_Succesful + #_Failed + #_Canceled) in (a,b]
-
-```
-=SUM(B2:D2)
-```
-
-Now that we have a sum of the total number of projects given an interval (a,b] we can get the percentage of each outcome by simply doing the following:
-
-    * %_Outcome = #_Outcome/#_Total_Projects 
+I applied this formula going down each respective column while adjusting the interval as necessary. The result was a table with the desired count with respect to the conditions previously mentioned. Now that we have this information it's time to analyze these outcomes as a percentage against the total number of kickstarters. Take the sum of each row to get the amount of total projects within that range. For an interval *(a,b]*: ```Total_Projects = (Succesful + Failed + Canceled) in =SUM(B2:D2)```. Now that we have a sum of the total number of projects given an interval *(a,b]* we can get the percentage of each outcome by simply taking the number of outcomes and dividing it by the total ```% = (Outcomes / Total )``` and setting the number format to %
     
 All of the data is now sorted in a way we can begin to visualize. The final step was to graph what was discovered in the hopes we can understand it better. Setting the X-axis to our intervals and the Y-axis as the %, it becomes much more clear how the goal amount affects the amount of succesful kickstarter campaigns which was what we were interested in from the start.
 
