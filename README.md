@@ -1,4 +1,4 @@
-# Kickstarting with Excel
+# Kickstarter Analysis
 
 ## Overview of Project
 We were tasked with analyzing Kickstarter data where we focused on analyzing overall outcomes in regard to their launch date along with their initial kickstarter goal. 
