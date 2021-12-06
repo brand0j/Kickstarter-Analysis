@@ -56,8 +56,14 @@ Taking the sum of each row for Total Projects was straightforward as was calcula
 
 - What are two conclusions you can draw about the Outcomes based on Launch Date?
 
+The first thing you can see by looking at Theatre Outcomes by Launch Date is that from April to May there is a significant increase in the amount of succesful kisckstarter campaigns compared to the amount that fail during this time. Another thing you should notice is that in December the amount of kickstarters that succeed & fail is almost exactly equal and we could expect to have the lowest % of success during this time. 
+
 - What can you conclude about the Outcomes based on Goals?
 
+When we are looking at percentages in Outcomes Based on Goal, you can see that the highest chance of success would be in the interval *(0,1000]*, closely followed by *(1000,5000]*. When it comes to which one is more of an accurate statistic I would say it's *(1000,5000]* since there is almost 3x the amount of total projects within this interval. Another thing to note is that success & failure are perfectly negatively correlated due to there being no data of canceled projects. 
+
 - What are some limitations of this dataset?
+
+This leads perfectly into the limitations of this set of data. Just looking at the graph you might think that kickstarters with goals between $35,000 and $45,000 are relatively succesful as well, but when you look at the table you will realize that this is due to a lack of data in general. There are only 9 total projects within this range which wouldn't be a large enough sample to accurately describe the success rate. 
 
 - What are some other possible tables and/or graphs that we could create?
