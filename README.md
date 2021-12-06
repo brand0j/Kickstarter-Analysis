@@ -16,13 +16,13 @@ I began the analysis by extracting the year from the Date Created column to a ne
 ### Analysis of Outcomes Based on Goals
 The next step in my analysis was to help Louise pinpoint the ideal amount for her kickstarter goal to ensure the highest probability of it being succesful. The goal is to gain insight on the following with respect to their goal amount:
 
-    - # Succesful
-    - # Failed
-    - # Canceled
-    - # Total Outcomes
-    - % Succesful
-    - % Failed
-    - % Canceled
+- *# Succesful*
+- *# Failed*
+- *# Canceled*
+- *# Total Outcomes*
+- *% Succesful*
+- *% Failed*
+- *% Canceled*
 
 Splitting up the goal amount into intervals of values *(a,b]*, where:
 
