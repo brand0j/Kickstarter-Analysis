@@ -26,8 +26,8 @@ The next step in my analysis was to help Louise pinpoint the ideal amount for he
 
 Splitting up the goal amount into intervals of values *(a,b]*, where:
 
-    - a = {0,1000,5000,10000,15000,20000,25000,30000,35000,40000,45000,50000}
-    - b = {1000,5000,10000,15000,20000,25000,30000,35000,40000,45000,50000,inf}
+- a = {0,1000,5000,10000,15000,20000,25000,30000,35000,40000,45000,50000}
+- b = {1000,5000,10000,15000,20000,25000,30000,35000,40000,45000,50000,inf}
 
 we can get a count of outcomes for that interval along with the specification that we are only interested in the subcategory *"plays"*. This is implemented in the following way using the [COUNTIFS function](https://support.microsoft.com/en-us/office/countifs-function-dda3dc6e-f74e-4aee-88bc-aa8c2a866842?ui=en-us&rs=en-us&ad=us) :
 
